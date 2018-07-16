@@ -564,12 +564,12 @@ def main():
 
         for i in xrange(iterations):
             generation += 1
-            list_neighbours = small_world_population(pop_size, 2, 0.3)
-            best_neighbours = dominate_sort(list_neighbours, process_code_population1, machine_code_population1, 0.2)
+            list_neighbours = small_world_population(pop_size, 2, 0.01)
+            best_neighbours = dominate_sort(list_neighbours, process_code_population1, machine_code_population1, 0.6)
             new_code_population = crossover(process_code_population1, best_neighbours, machine_code_population1)
             new_process_code_population = new_code_population[0]
             new_machine_code_population = new_code_population[1]
-            new_code_population = mutation(new_process_code_population, new_machine_code_population, 0.3)
+            new_code_population = mutation(new_process_code_population, new_machine_code_population, 1)
             process_code_population2 = new_code_population[0]
             machine_code_population2 = new_code_population[1]
             trait1 = dictionary(process_code_population1, machine_code_population1, pop_size)

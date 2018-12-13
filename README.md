@@ -6,4 +6,4 @@ Requirement
 python 2.7
 
 Usage
-python SWGAs2
+python improved SWGAs2.py
